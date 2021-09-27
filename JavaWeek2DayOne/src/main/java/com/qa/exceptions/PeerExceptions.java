@@ -13,7 +13,7 @@ public class PeerExceptions extends Exception { // extend from exception but cou
 	public PeerExceptions() { // this is an empty constructor needed for creating your own error class as well - why??
 		
 	}
-	
+
 	
 	public static double calculate() {
 		double z = 0;

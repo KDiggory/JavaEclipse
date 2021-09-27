@@ -1,0 +1,14 @@
+JDBC CRUD
+---------
+
+Java Database Connectivity - an application programming interface that allows us to connect a database with our Java application
+
+To access data in the db we need 4 things
+1 - open the connection
+2 - create/prepare a statement
+3 - execute the statement
+4 - close the connection
+
+Should be done in a try/catch/finalise or try with resources block
+
+JDBC allows us to connect to a database and add/delete or edit things.
