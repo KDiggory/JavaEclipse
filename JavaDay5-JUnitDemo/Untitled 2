@@ -1,0 +1,87 @@
+~~~~~~~~~~~~~Maven~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Maven is a build tool that allows us to manage dependencies. 
+
+Dependencies are code required to run your code - don't need to waste time writing lots of things to get things done. Testing frameworks are already written.
+We will be using J-Unit - this is Javas main testing framework. (J-Unit4, there is a later version but it isn't so good with eclipse).
+
+Instead of making a Java project make a maven project now. 
+	No longer just have source java folder, lots of others including test and target ones.
+	source/main/java - where your main code goes
+	source/main/resources - where your config files for db go, or images etc --> anything that is not .java
+	source/test/java - where you store the tests
+	source/tes/resources - where you store the extra files but for the test files
+	src is where
+	target is where our final packaged file will be - when ready to share
+	pom.xml - Stores info about project and pointers to dependencies we want to use in the project. Need to add the dependency for JUnit5
+	
+	This is:
+	
+-------------------------
+	
+	<dependencies> 						This is the start of all the dependencies
+	
+  <dependency>							Each single dependency will have its own opening and closing dependency tags
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>		This is the block for maven, other dependencies will also go in the main dependencies tag
+    <version>4.12</version>				Another dependency would also go in there but also have its own dependency tag
+    <scope>test</scope>
+</dependency>
+
+</dependencies> 						This is the end of all the dependencies. The forward slash means its the end 
+
+-------------------------------
+	
+By default maven runs java 1.5! needs to be changed. Right click the project and go to properties/compiler and change to the newest one. 
+Then, right click execution environment/ properties and change the execution environment.  
+Need to both these steps manually
+
+-----------------------------------------
+Running tests
+
+Make your class and then make another one in src/test/java with the same package name and the class name the same with Test on the end
+
+@BeforeClass - will run just once. Eg, if testing interacting with a database it would be initalise connection with database
+
+@Before - before each test that is run, eg, create a new instance of the calculator before the test is run. So anything you set in test doesnt affect any other tests. 
+
+@Test - runs each test
+
+@After - after each test is run, get rid of that instance/ set it to null so it doesnt persist
+
+@AfterClass - will run just once. eg, close connection with the database
+
+------------------
+
+Functional testing
+
+
+unit test			---> this is what regular developers should be doing, the rest is left to professional testers
+	testing each method separately
+ 
+integration testing  --> might be done by testers
+	testing how the methods interact with each other
+	
+end to end testing
+	testing the program as a whole
+	
+regression testing
+	checking that anything youve added hasnt changed the results
+	
+maintenance testing
+
+Non functional testing --> definately done by specialised testing teams (manual testers, automation testers etc)
+
+smoke testing
+
+load testing 
+	
+spike testing
+	what if 1000 people tried to press the same button at the same time? 
+	
+test driven development - write your tests before writing your code!! 
+Red green re-factoring.
+Creates robust systems - write sudo code, then tests, then code, then check and change code if needed, then test again, then change, then test --> red green because of the passing/failing of tests. 
+
+
+	

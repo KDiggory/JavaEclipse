@@ -1,0 +1,43 @@
+			Polymorphism 
+			------------
+
+Java is a polymophic language because classes can inherit from a parent class.
+An object can take many forms!
+eg, using Vehicle instead of the child class when using them in methods it means you can add another type of vehicle without needing to change the methods.
+The instance is a vehicle, the object type is a car.
+
+vehicle, car, caravan are all objects - dont use object though, use vehicle as object can get a bit funny when referencing it sometimes. 
+car and caravan are both vehicles
+
+Similar to how you use List<Vehicle> listName = new ArrayList<>() - list is the highest type of list so you can use any type of list within the types.
+Don't need to go back and change the list type in your code as well. 
+
+			Refactoring
+			-----------
+Going over code to make it more efficient! 
+
+
+			Abstraction
+			-----------
+		
+Hiding the 
+
+Essentially means you don't know what is happening to the data - you only see the output. 
+
+Abstract keyword - public abstract class  Vehicle 
+still workds the same, but means you can implement essential functionality 
+
+			Interfaces
+			----------
+
+Allow us to share functionality between multiple classes if needed.
+Have to call the interface in the class name part at the top, can call multiple interfaces
+Each interface should only have one method in it and the method should be empty
+The class where it is called has to have a method that overrides that. 
+
+
+		Typecasting
+		-----------
+		
+
+

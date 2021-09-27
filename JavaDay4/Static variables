@@ -1,0 +1,21 @@
+		Static variables and methods
+		---------------------------
+		
+Static means the method can be used without making an instance of the class it is in
+A static variable belongs to the class, not instances of that class. A static method can be called without instantiating the class
+A static class must be nested within a class
+
+		Final 
+		-----
+		
+Final can be used with variable, method or class
+
+variable - can no longer change the value of that variable
+method - can no longer override that method
+class - can not have inheritance from this class
+
+When to use final?
+
+variable - for a constant such as PI, or another thing that isnt going to change. Probably a mathmatical thing
+method - 
+class - 
