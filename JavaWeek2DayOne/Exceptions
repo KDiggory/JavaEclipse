@@ -1,0 +1,58 @@
+Exception Handling
+------------------
+
+An exception in Java is an abnormal condition - maybe a data type set wrong --> Something that will disrupt the normal flow of the program.
+
+Need to alert Java to the fact that your code might have an exception - else Java will just shut down. 
+Exception handling suppresses this shut down when there is an exception and it can continue running.
+
+Exceptions are NOT errors.
+Errors are a subclass of throwable that indicate a serious problem that the apoplication should not try to deal with.
+
+Throwable 
+	|  \
+	|   \ 
+	|    \
+	|     \
+	|      \
+Exceptions  Errors
+	|  \
+	|   \
+	|    \
+	|     \
+Checked    Unchecked
+	
+
+Exceptions can be checked or unchecked.
+Checked exceptions are compile time issues and ones that we can anticipate ahead of time, this allows us to plan for if and when it arises.
+
+Unchecked exceptions
+
+Handling exceptions
+-------------------
+
+try - where we place code that might throw an exception
+catch - used to handle exceptions thrown by code in the try block.
+finally - executes the code within its block regardless of whether the exception is handled or not.
+throw - used to throw the exception in question.
+throws - declares the exception in question. 
+
+try block 
+ - says try and run everything inside this block of code. If it doesn't run we can catch it. 
+ 
+ throw block
+ - can create a manual exception. Something that normally isnt a problem, but for you it would be. Eg if an input is too low. 
+ - use throws to say what kind of exceptions we are expecting - to tell us and other developers what to expect if things go wrong. 
+ 
+ 
+ Custom Exceptions
+ - these are where you can write your own specialised error message. 
+ - if doing several catches these need to be in the order from most specialised to least specialised.
+ - custom exceptions need 2 constructors, one with a string input and one empty one. 
+
+ 
+ 
+ 
+ 
+ 
+ 
