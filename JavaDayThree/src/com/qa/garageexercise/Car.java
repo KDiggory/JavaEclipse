@@ -20,6 +20,11 @@ public class Car extends Vehicle{
 				+ engineSize + ", catag=" + catag + "]";
 	}
 
+	@Override
+	public int bill() {
+		return 1000;
+	}
+
 	
 	// to string method means you can get data to console instead of the location of the information
 	 // can also put super in here

@@ -1,0 +1,96 @@
+SOLID PRINCIPLES
+
+focus on good design and coding practive. 
+Designed to encourage developers to make easily maintainable, understandable and flexible software. 
+
+
+
+
+1 -  Single Responsibility -------- S
+
+Reasons for something to change.
+If a class has single responsibility then it only has one reason to change. 
+eg, a car class controls mileage but a driver class should be used to control drive, as that isnt something that the car is responsible for.
+
+If there are 2 reasons to change this should be split into 2 classes. 
+Should be done in a way that decreases coupling (interdependancy of classes) and increases cohesion. 
+
+In the future if you need to make a change you only need to change one class.  
+
+
+2 - Open/closed ------------------- O
+
+Open for extension but closed for modification.
+
+Write code that doesn't have to be changed every time the requirements change.
+
+Open/closed is acheived using inheritance polymorphism and interfaces. 
+
+Eg an area calculator - dont have all shapes in one class. 
+
+An interface - shapes containing a calculate area method
+A superclass calculator - will have the method for calculating area from the interface
+subclasses for shapes - will have an overridden method for calculating area.
+
+Then when you need to add a new shape you make a new class without having to alter anything else. 
+
+Why abstraction vs interface?
+Interfaces can only have an empty method
+Abstract methods can have code in the method. 
+
+3 - Liskov Substitution ----------- L
+Liscov substitution principle states that functions which use pointers to base classes (parent classes) must be able to use objects of derived classes (child classes)
+without knowing it. 
+
+Everything in the superclass should be usable by the subclasses
+
+"Objects of a superclass shall be replaceable with objects of its subclasses without breaking the application"
+
+eg
+a bird class may have a method fly
+but penguins can't fly so couldn't use this method!
+so could use 2 interfaces flightless Bird and flyingBird
+then in owl and penguin you could implement different interfaces for each. 
+
+When pointing to parent class be as ambiguous as possible --> keep it open. 
+
+Youtube video
+If S in a subtype of T then objects of type T can be replaced with objects of type S.
+
+does every type of subclass fit with the same methods from the superclass.
+eg, a square could be inherited from rectangle - but.. methods on rectangle might not work on square - so they should both inherit from shape. 
+
+
+
+
+4 - Interface segregation --------- I
+Each interface should only contain one method
+don't want to use an interface if there are methods in it you aren't using - as you have to @Override a method if its in an interface you have implemented. 
+
+
+
+
+5 - Dependency Inversion ---------- D
+- High level modules should not depend on low level modules - both should depend on abstractions such as interfaces instead.
+- Abstractions should not depend on details (concrete implementations) - instead details should depend on abstractions.
+
+---- both high and low levels should depend on abstractions rather than each other ---------
+
+eg In a weather alerter you wouldnt want to instantiate an instance of phone and email in the weather tracker as they are lower level - should have these as interfaces which you then implement. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

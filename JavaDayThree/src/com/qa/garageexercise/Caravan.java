@@ -16,10 +16,10 @@ int berth = 6;
 				+ ", engineSize=" + engineSize + ", catag=" + catag + "]";
 	}
 
-	
-
-	
-	
-	
+	@Override
+	public int bill() {
+		
+		return 600;
+	}
 
 }

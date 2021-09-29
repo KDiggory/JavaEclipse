@@ -1,6 +1,6 @@
 package com.qa.garageexercise;
 
-public class Motorbike extends Vehicle{
+public class Motorbike extends Vehicle {
 	
 	boolean dangerous = true;
 
@@ -16,9 +16,12 @@ public class Motorbike extends Vehicle{
 				+ ", catag=" + catag + " dangerous=" + this.dangerous + "]";
 	}
 
-
+	@Override
+	public int bill() {
+		
+		return 200;
+	}
 
 	
 
-
-}
+	}
